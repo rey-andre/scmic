@@ -1,0 +1,70 @@
+.swiper {
+  width: 220px;
+  height: 240px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.swiper-slide:nth-child(1n) {
+  background-color: #fff;
+}
+
+.galeri {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/bg-galeri-content.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/bg-galeri-content.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.galeri .image {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+}
+
+.galeri .image img {
+  width: 100%;
+  -webkit-box-shadow: 4rem 4rem 0 rgba(255, 0, 0, 0.1);
+  box-shadow: 4rem 4rem 0 rgba(255, 0, 0, 0.1);
+}
+
+.galeri .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+}
+
+.galeri .content h3 {
+  font-size: 3rem;
+  color: #000000;
+}
+
+.galeri .content p {
+  font-size: 1.5rem;
+  color: #000000;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+@media screen and (max-width: 300px) {
+  .swiper {
+    width: 110px;
+    height: 120px;
+  }
+}
