@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 29, 2022 at 02:22 PM
--- Server version: 10.3.36-MariaDB-cll-lve
--- PHP Version: 7.4.30
+-- Host: 127.0.0.1
+-- Generation Time: Dec 10, 2022 at 03:20 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `candrawj_indonesia`
+-- Database: `indonesiacerdas`
 --
 
 -- --------------------------------------------------------
@@ -41,9 +40,7 @@ CREATE TABLE `galeri` (
 --
 
 INSERT INTO `galeri` (`id`, `nama_galeri`, `foto_galeri`, `target`, `created_at`) VALUES
-(3, 'Merapi', 'Bannergudeg_.jpg', 'Header', '2022-11-27 16:28:47'),
-(4, 'Merapi', 'Bannergudeg_1.jpg', 'Destinasi Pilihan', '2022-11-27 16:30:27'),
-(5, 'Merapi', 'Bannergudeg_11.jpg', 'Inspirasi Perjalanan', '2022-11-27 16:30:41');
+(8, 'Bali', 'card3_2.jpg', 'Header', '2022-12-02 17:58:45');
 
 -- --------------------------------------------------------
 
@@ -64,7 +61,12 @@ CREATE TABLE `laporan` (
 --
 
 INSERT INTO `laporan` (`id`, `id_user`, `foto`, `tgl`, `deskripsi`) VALUES
-(5, 10, 'bogor_10.jpg', '2022-11-28 21:17:59', 'saya mau melapor');
+(41, 3, '', '0000-00-00 00:00:00', 'user3@gmail.com'),
+(42, 0, '', '0000-00-00 00:00:00', 'test import'),
+(45, 3, '', '0000-00-00 00:00:00', 'user3@gmail.com'),
+(46, 0, '', '0000-00-00 00:00:00', 'test import'),
+(47, 0, '', '0000-00-00 00:00:00', 'test import'),
+(53, 7, '', '0000-00-00 00:00:00', 'test import');
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,10 @@ INSERT INTO `user` (`id`, `email`, `nama`, `no_hp`, `password`, `role`) VALUES
 (7, 'ihsanulhadi23@gmail.com', 'Ihsan', '082285292309', 'e699e672f32834b3e485a32691f5a687', 'admin'),
 (8, 'ihsanulhadi40@gmail.com', 'ihsan', '082285292309', 'e699e672f32834b3e485a32691f5a687', 'admin'),
 (9, 'ferdy@gmail.com', 'ferdy', '081234567890', 'b38cefac115e58ed079972d1891e4b39', 'admin'),
-(10, 'user@gmail.com', 'user', '123456789', '6ad14ba9986e3615423dfca256d04e3f', 'user');
+(10, 'user@gmail.com', 'user', '123456789', '6ad14ba9986e3615423dfca256d04e3f', 'user'),
+(11, 'testuser@gmail.com', 'test', '081234567890', '827ccb0eea8a706c4c34a16891f84e7b', 'user'),
+(13, 'userbiasa@gmail.com', 'userbiasa', '123012931231', '827ccb0eea8a706c4c34a16891f84e7b', 'user'),
+(14, 'akunuser@gmail.com', 'akun user', '018123123123', '827ccb0eea8a706c4c34a16891f84e7b', 'user');
 
 --
 -- Indexes for dumped tables
@@ -124,19 +129,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
